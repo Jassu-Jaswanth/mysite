@@ -1,0 +1,11 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+<ul>
+    {% for user in data %}
+        <li> <a href="{% url 'profile' %}">{{ user.username }}</a> </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

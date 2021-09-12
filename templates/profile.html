@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+
+<h1>{{ data.first_name }} {{ data.last_name }} (@ {{ data.username }} )</h1>
+<p> {{data.profile.followers}} followers </p>
+<ul>
+{% for reponame in repos %}
+    <li> {{ reponame }} </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

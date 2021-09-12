@@ -1,0 +1,18 @@
+.DashBoard {
+    background: skyblue;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+
+.buts {
+    font-size: 50px;
+    border-radius: 5px;
+    color: white;
+    background: blue;
+}
+
+#welcome {
+    font-size: 75px;
+    font-weight: bold;
+}
