@@ -12,7 +12,16 @@
     background: blue;
 }
 
+.players {
+    font-size: 25px;
+    background: white;
+    border-color: blue;
+    border-width: 2px;
+    margin: 5px;
+}
+
 #welcome {
     font-size: 75px;
     font-weight: bold;
 }
+

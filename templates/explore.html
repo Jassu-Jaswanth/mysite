@@ -9,7 +9,7 @@
             {% csrf_token %}
             <li> 
             <input type="hidden" name="user_name" value="{{ user.username }}">
-            <button type="submit">{{ user.username }}</button>
+            <button class='players' type="submit">{{ user.username }}</button>
             </li>
         </form>
     {% endfor %}
