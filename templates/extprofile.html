@@ -5,7 +5,7 @@
 
 <h1>{{ data.first_name }} {{ data.last_name }} (@ {{ data.username }} )</h1>
 <p> {{ data.profile.followers }} followers </p>
-<p>Profile last updated : {{ data.profile.lastUpdated }} <a href="{% url 'store' %}">(Update Profile)</a></p>
+<p>Profile last updated : {{ data.profile.lastUpdated }}</p>
 <ul>
 {% for reponame, stars in repos.items %}
     <li> {{ reponame }} - {{ stars }} </li>

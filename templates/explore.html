@@ -2,9 +2,16 @@
 
 {% block content %}
 
+
 <ul>
     {% for user in data %}
-        <li> <a href="{% url 'profile' %}">{{ user.username }}</a> </li>
+        <form action="{% url 'extprofile' %}" method="POST">
+            {% csrf_token %}
+            <li> 
+            <input type="hidden" name="user_name" value="{{ user.username }}">
+            <button type="submit">{{ user.username }}</button>
+            </li>
+        </form>
     {% endfor %}
 </ul>
 
