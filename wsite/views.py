@@ -28,9 +28,10 @@ def store(request):
     url = f'https://api.github.com/users/{user_name}'
     data = fetch(url)
     user.profile.followers = data['followers']
+    user.profile.save()
     url = f'https://api.github.com/users/{user_name}/repos'
     data = fetch(url)
-        
+    
     existing_repos = Repositories.objects.filter(username = user_name)
     for repo in data:
         e = existing_repos.filter(repo_name=repo['name'])
@@ -42,6 +43,7 @@ def store(request):
             r.repo_name = repo['name']
             r.stars = repo['stargazers_count']
             r.save()
+    user.profile.save()
     ts = datetime.now()
     ts += timedelta(hours=5,minutes=30)
     user.profile.lastUpdated = str(ts.strftime("%d %b, %Y %I:%M %p"))
