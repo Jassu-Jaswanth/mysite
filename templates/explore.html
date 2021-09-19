@@ -9,7 +9,11 @@
             {% csrf_token %}
             <li> 
             <input type="hidden" name="user_name" value="{{ user.username }}">
+<<<<<<< HEAD
             <button class='players' type="submit">{{ user.username }}</button>
+=======
+            <button type="submit">{{ user.username }}</button>
+>>>>>>> refs/remotes/origin/main
             </li>
         </form>
     {% endfor %}
